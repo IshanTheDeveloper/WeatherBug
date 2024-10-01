@@ -1,0 +1,409 @@
+/* Reset default padding and margin for all elements */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Body styling */
+body {
+  /* Background image for the body */
+  background-image: url("https://t4.ftcdn.net/jpg/08/26/86/83/360_F_826868314_6VRvHms5ksS06t2orMqBkkxplAeH0HKI.jpg");
+  background-size: contain; /* Ensures the background image is scaled correctly */
+}
+
+/* Heading styles */
+.heading {
+  margin-top: 2vh; /* Margin from the top */
+  text-align: center; /* Center the text */
+  letter-spacing: 0.5vw; /* Space between letters */
+  font-size: 3rem; /* Font size */
+  font-weight: 700; /* Bold text */
+  backdrop-filter: blur(30px); /* Blurs the background behind the text */
+  color: white; /* Text color */
+  font-family: "Abril Fatface", serif; /* Font family */
+  width: 90vw; /* Width of the heading */
+  margin-left: 5vw; /* Center the heading horizontally */
+  border-radius: 2rem; /* Rounded corners */
+  border: 2px solid white; /* White border */
+}
+
+/* Container for the weather information */
+.container {
+  width: 30vw; /* Width of the container */
+  height: 76vh; /* Height of the container */
+  border-radius: 2rem; /* Rounded corners */
+  margin-top: 5vh; /* Margin from the top */
+  margin-left: 2rem; /* Margin from the left */
+  padding: 1rem; /* Inner padding */
+  box-shadow: 0 0 5px 5px grey; /* Shadow effect */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Semi-transparent white background */
+  border: 2px solid white; /* White border */
+}
+
+/* Styles for the weather logo */
+.weather-logo {
+  display: flex; /* Use flexbox layout */
+  width: 90%; /* Width of the logo section */
+  justify-content: center; /* Center the content */
+  gap: 0.5rem; /* Space between items */
+  font-size: 3rem; /* Font size */
+  font-weight: 900; /* Extra bold text */
+  margin: 1rem; /* Margin around the logo */
+}
+
+/* Icon within the weather logo */
+.weather-logo i {
+  font-size: 5rem; /* Size of the icons */
+}
+
+/* Styles for the location input section */
+.location {
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center the input */
+  margin-top: 10vh; /* Margin from the top */
+}
+
+/* Styles for the location input field */
+.location input {
+  width: 80%; /* Width of the input field */
+  padding: 1rem; /* Inner padding */
+  font-size: 1rem; /* Font size */
+  border-radius: 1rem; /* Rounded corners */
+  border: 1px solid grey; /* Grey border */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Hover effect for the input field */
+.location input:hover {
+  width: 90%; /* Increase width on hover */
+  font-size: 1.1rem; /* Slightly larger font size */
+  box-shadow: 0 0 3px 3px grey; /* Shadow effect */
+  cursor: pointer; /* Pointer cursor */
+  transition: all 0.5s; /* Smooth transition */
+}
+
+/* Styles for the get weather button section */
+.get-weather {
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center the button */
+  margin-top: 5vh; /* Margin from the top */
+}
+
+/* Styles for the get weather button */
+.get-weather button {
+  color: white; /* Text color */
+  background-color: rgb(31, 203, 31); /* Green background */
+  padding: 0.5rem; /* Inner padding */
+  font-size: 1.5rem; /* Font size */
+  border-radius: 1.5rem; /* Rounded corners */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor */
+}
+
+/* Hover effect for the get weather button */
+.get-weather button:hover {
+  font-size: 1.8rem; /* Increase font size on hover */
+  box-shadow: 0 0 3px 3px grey; /* Shadow effect */
+  transition: all 0.5s; /* Smooth transition */
+}
+
+/* Styles for the "or" text */
+#or {
+  font-size: 2rem; /* Font size */
+  text-align: center; /* Center the text */
+  margin-top: 3vh; /* Margin from the top */
+  color: grey; /* Text color */
+}
+
+/* Styles for the current location button section */
+.current-location {
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center the button */
+  margin-top: 5vh; /* Margin from the top */
+}
+
+/* Styles for the current location button */
+.current-location button {
+  width: 80%; /* Width of the button */
+  font-size: 1.3rem; /* Font size */
+  border-radius: 0.5rem; /* Rounded corners */
+  padding: 0.3rem; /* Inner padding */
+  background-color: grey; /* Grey background */
+  color: white; /* Text color */
+  cursor: pointer; /* Pointer cursor */
+  border: none; /* No border */
+}
+
+/* Hover effect for the current location button */
+.current-location button:hover {
+  background-color: rgb(28, 89, 220); /* Change background color on hover */
+  width: 85%; /* Increase width on hover */
+  padding: 0.5rem; /* Increase padding on hover */
+  border: 2px solid black; /* Black border on hover */
+  transition: all 0.5s; /* Smooth transition */
+}
+
+/* Styles for the bottom logo section */
+.bottom-logo {
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center the icons */
+  gap: 2rem; /* Space between icons */
+  margin-top: 5vh; /* Margin from the top */
+  cursor: pointer; /* Pointer cursor */
+}
+
+/* Icon styles in the bottom logo section */
+.bottom-logo i {
+  font-size: 2.5rem; /* Size of the icons */
+}
+
+/* Hover effect for bottom logo icons */
+.bottom-logo i:hover {
+  font-size: 3.5rem; /* Increase size on hover */
+  transition: all 0.3s; /* Smooth transition */
+}
+
+/* Styles for the recent searches dropdown */
+#recent-searches {
+  margin-right: 1.5vw; /* Margin on the right */
+  border: none; /* No border */
+}
+
+/* Styles for the display section of weather data */
+.display-section {
+  width: 63vw; /* Width of the section */
+  margin-top: 5vh; /* Margin from the top */
+  border-radius: 2rem; /* Rounded corners */
+  background-image: url("https://images3.alphacoders.com/694/694722.jpg"); /* Background image */
+  background-size: cover; /* Cover the entire section */
+  font-family: "Roboto", sans-serif; /* Font family */
+  border: 2px solid white; /* White border */
+  display: none; /* Initially hidden */
+}
+
+/* Main container for layout */
+.main-container {
+  display: flex; /* Use flexbox layout */
+  gap: 1.4rem; /* Space between items */
+}
+
+/* Styles for city name display */
+.city-name {
+  display: flex; /* Use flexbox layout */
+  font-size: 5rem; /* Font size */
+  color: white; /* Text color */
+  justify-content: space-between; /* Space items evenly */
+  padding-left: 3rem; /* Left padding */
+  padding-right: 3rem; /* Right padding */
+  border-top-left-radius: 2rem; /* Rounded top left corner */
+  border-top-right-radius: 2rem; /* Rounded top right corner */
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+}
+
+/* Image styles in the city name section */
+.city-name img {
+  width: 6vw; /* Width of the image */
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+  height: 12vh; /* Height of the image */
+  margin-top: 1vh; /* Margin on top */
+  margin-bottom: 1vh; /* Margin on bottom */
+  border-radius: 10rem; /* Rounded corners */
+}
+
+/* Styles for country display */
+.country {
+  color: white; /* Text color */
+  display: flex; /* Use flexbox layout */
+  justify-content: space-between; /* Space items evenly */
+  padding-left: 3rem; /* Left padding */
+  padding-right: 3rem; /* Right padding */
+  font-size: 2rem; /* Font size */
+  margin-top: 1vh; /* Margin from the top */
+}
+
+/* Styles for longitude display */
+.longitude {
+  color: white; /* Text color */
+  font-size: 2rem; /* Font size */
+  display: flex; /* Use flexbox layout */
+  margin-top: 1vh; /* Margin from the top */
+  justify-content: end; /* Align items to the end */
+  padding-right: 3rem; /* Right padding */
+}
+
+/* Styles for weather items display */
+.weather-items {
+  margin-top: 3vh; /* Margin from the top */
+  margin-bottom: 2vh; /* Margin from the bottom */
+  display: flex; /* Use flexbox layout */
+  gap: 0.5rem; /* Space between items */
+  margin-left: 0.5rem; /* Left margin */
+  padding-right: 0.5rem; /* Right padding */
+}
+
+/* Styles for individual weather item */
+.weather-items span {
+  color: white; /* Text color */
+  backdrop-filter: blur(20px); /* Blurs the background */
+  border: 2px solid white; /* White border */
+  font-size: 1.8rem; /* Font size */
+  width: 12vw; /* Width of the item */
+  height: 20vh; /* Height of the item */
+  border-radius: 2rem; /* Rounded corners */
+  text-align: center; /* Center text */
+}
+
+/* Hover effect for weather items */
+.weather-items span:hover {
+  box-shadow: 0 0 5px 5px white; /* Shadow effect on hover */
+  width: 12.5vw; /* Slightly increase width */
+  cursor: pointer; /* Pointer cursor */
+  transition: all 0.3s; /* Smooth transition */
+}
+
+/* Icon styles within weather items */
+.weather-items i {
+  font-size: 3rem; /* Size of the icons */
+  padding: 0.5rem; /* Inner padding */
+}
+
+/* Styles for forecast heading */
+#forecast-heading {
+  width: 99.3%; /* Width of the heading */
+  text-align: center; /* Center the text */
+  font-size: 2rem; /* Font size */
+  margin-bottom: 0.5rem; /* Margin from the bottom */
+  padding-left: 0.5rem; /* Left padding */
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+  color: white; /* Text color */
+}
+
+/* Styles for forecast section */
+.forecast {
+  display: flex; /* Use flexbox layout */
+}
+
+/* Styles for individual forecast item */
+.forecast span {
+  color: white; /* Text color */
+  background-color: rgb(23, 70, 88); /* Background color */
+  width: 17vw; /* Width of the forecast item */
+  border: 1px solid white; /* White border */
+  height: 21vh; /* Height of the item */
+  font-size: 1.5rem; /* Font size */
+  padding: 0.5rem; /* Inner padding */
+  border-bottom-left-radius: 1.5rem; /* Rounded bottom left corner */
+  border-bottom-right-radius: 1.5rem; /* Rounded bottom right corner */
+}
+
+/* Styles for forecast date display */
+#forecast-date {
+  text-align: center; /* Center the text */
+  font-size: 2rem; /* Font size */
+  margin-bottom: 1vh; /* Margin from the bottom */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 769px) {
+  .main-container {
+    display: block; /* Stack elements vertically */
+  }
+  .container {
+    width: 82vw; /* Adjust container width */
+    height: 45vh; /* Adjust container height */
+  }
+  .location,
+  .get-weather,
+  .current-location {
+    margin-top: 2vh; /* Adjust margin */
+  }
+  .display-section {
+    width: 80vw; /* Adjust section width */
+    background-image: none; /* Remove background image */
+    background-color: black; /* Set background color */
+  }
+  .city-name {
+    width: 82.5%; /* Adjust width */
+    font-size: 3rem; /* Adjust font size */
+    margin-top: 3vh; /* Adjust margin */
+    padding-right: 3rem; /* Adjust padding */
+    background-color: black; /* Set background color */
+  }
+  .country,
+  .longitude {
+    background-color: black; /* Set background color */
+    margin-top: 0; /* Remove margin */
+  }
+  .weather-items {
+    background-color: black; /* Set background color */
+    margin-top: 0; /* Remove margin */
+    margin-left: 0; /* Remove margin */
+  }
+  .weather-items span {
+    width: 17vw; /* Adjust width */
+    margin-left: 0.5vw; /* Adjust margin */
+    font-size: 1.2rem; /* Adjust font size */
+    padding-top: 0.5rem; /* Adjust padding */
+    height: 15vh; /* Adjust height */
+  }
+  #forecast-heading {
+    margin-top: 0; /* Remove margin */
+  }
+  .forecast span {
+    height: 15vh; /* Adjust height */
+  }
+}
+
+/* Responsive styles for very small screens */
+@media (max-width: 376px) {
+  .heading {
+    font-size: 2rem; /* Adjust font size */
+  }
+  .container {
+    width: 80vw; /* Adjust width */
+    margin-left: 5vw; /* Adjust margin */
+  }
+  .weather-logo {
+    font-size: 2rem; /* Adjust font size */
+  }
+  .weather-logo i {
+    font-size: 3rem; /* Adjust icon size */
+  }
+  .bottom-logo {
+    display: none; /* Hide bottom logo section */
+  }
+  .city-name {
+    font-size: 1.5rem; /* Adjust font size */
+    margin-top: 1vh; /* Adjust margin */
+    padding-left: 1.5rem; /* Adjust padding */
+  }
+  .country,
+  .longitude {
+    font-size: 1.3rem; /* Adjust font size */
+    padding-right: 2rem; /* Adjust padding */
+  }
+  .weather-items span {
+    font-size: 0.7rem; /* Adjust font size */
+    border-radius: 0.5rem; /* Adjust border radius */
+    height: 10vh; /* Adjust height */
+    margin-bottom: 0; /* Remove margin */
+  }
+  .weather-items span i {
+    font-size: 1.3rem; /* Adjust icon size */
+  }
+  #forecast-heading {
+    margin-top: 0; /* Remove margin */
+    font-size: 1rem; /* Adjust font size */
+  }
+  .forecast span {
+    height: 10vh; /* Adjust height */
+  }
+  #or {
+    font-size: 1rem; /* Adjust font size */
+  }
+}
