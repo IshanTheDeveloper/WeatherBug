@@ -13,7 +13,7 @@ body {
 
 /* Heading styles */
 .heading {
-  margin-top: 2vh; /* Margin from the top */
+  margin-top: 1vh; /* Margin from the top */
   text-align: center; /* Center the text */
   letter-spacing: 0.5vw; /* Space between letters */
   font-size: 3rem; /* Font size */
@@ -26,13 +26,40 @@ body {
   border-radius: 2rem; /* Rounded corners */
   border: 2px solid white; /* White border */
 }
-
+.github {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5vh;
+  margin-right: 4vw;
+  margin-bottom: 0.5vh;
+}
+.github a {
+  cursor: pointer;
+  color: red;
+  text-decoration: none;
+  font-size: 1.2rem;
+  background-color: rgb(255, 255, 255, 0.5);
+  border: 2px solid red;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  animation: blinks 0.5s ease-in-out infinite;
+}
+@keyframes blinks {
+  from {
+    color: red;
+    transition: all 0.5s;
+  }
+  to {
+    color: blue;
+    transition: all 0.5s;
+  }
+}
 /* Container for the weather information */
 .container {
   width: 30vw; /* Width of the container */
-  height: 76vh; /* Height of the container */
+  height: 74vh; /* Height of the container */
   border-radius: 2rem; /* Rounded corners */
-  margin-top: 5vh; /* Margin from the top */
+  height: 77vh;
   margin-left: 2rem; /* Margin from the left */
   padding: 1rem; /* Inner padding */
   box-shadow: 0 0 5px 5px grey; /* Shadow effect */
@@ -177,7 +204,9 @@ body {
 /* Styles for the display section of weather data */
 .display-section {
   width: 63vw; /* Width of the section */
-  margin-top: 5vh; /* Margin from the top */
+  margin-top: 0vh; /* Margin from the top */
+  margin-right: 1vw;
+  height: max-content;
   border-radius: 2rem; /* Rounded corners */
   background-image: url("https://images3.alphacoders.com/694/694722.jpg"); /* Background image */
   background-size: cover; /* Cover the entire section */
@@ -189,6 +218,7 @@ body {
 /* Main container for layout */
 .main-container {
   display: flex; /* Use flexbox layout */
+  justify-content: center;
   gap: 1.4rem; /* Space between items */
 }
 

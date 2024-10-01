@@ -109,7 +109,7 @@ const weatherOperation = (lat, lon) => {
         i++
       ) {
         const iconlogo =
-          data.forecast.forecastday[0].hour[i + 3].condition.icon;
+          data.forecast.forecastday[0].hour[i + 4].condition.icon;
         forecastIcons[i].src = `https:${iconlogo}`; // Set the src for each icon element
       }
 
