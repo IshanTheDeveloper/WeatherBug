@@ -1,4 +1,5 @@
 Overview
+
 WeatherBug is a simple web application that allows users to get real-time weather information for any location around the world. The application fetches weather data using an external weather API and provides detailed information such as temperature, humidity, wind speed, and more. Users can enter a location or use their current geolocation to retrieve weather updates.
 
 Features

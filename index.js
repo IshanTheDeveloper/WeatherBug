@@ -18,6 +18,7 @@ const currentLocation = document.querySelector("#current-locate"); // Button to 
 const icons = document.querySelector("#icon-img"); // Image element to display weather icon
 const displays = document.querySelector(".display-section"); // Section to display weather data
 const dropdown = document.querySelector("#recent-searches"); // Dropdown for recent searches
+const forecastdate = document.querySelectorAll(".forecast-date");
 
 // Function to load recent city searches from local storage
 const loadRecentSearches = () => {
@@ -98,6 +99,45 @@ const weatherOperation = (lat, lon) => {
       displayhumidity.innerText = `${humidity}% `;
       displays.style.display = "inline"; // Show the weather display section
       userInput.value = ""; // Clear user input
+
+      const forecastIcons = document.querySelectorAll(".forecast-icon"); // Select all icon elements
+
+      for (
+        let i = 0;
+        i < forecastIcons.length &&
+        i < data.forecast.forecastday[0].hour.length;
+        i++
+      ) {
+        const iconlogo =
+          data.forecast.forecastday[0].hour[i + 3].condition.icon;
+        forecastIcons[i].src = `https:${iconlogo}`; // Set the src for each icon element
+      }
+
+      const forecasttemp = document.querySelectorAll(".forecast-temp");
+      const hourData = data.forecast.forecastday[0].hour;
+      for (let i = 0; i < forecasttemp.length && i < hourData.length; i++) {
+        const temp = hourData[i].temp_c;
+        forecasttemp[i].innerHTML = `Temperature : ${temp}°C`;
+      }
+
+      const forecasthumidity = document.querySelectorAll(".forecast-humidity");
+      const humidityData = data.forecast.forecastday[0].hour;
+      for (let i = 0; i < forecasttemp.length && i < humidityData.length; i++) {
+        const humid = humidityData[i].humidity;
+        forecasthumidity[i].innerHTML = `Humidity :  ${humid}%`;
+      }
+
+      // Get 5 forecast's date
+      const today = new Date();
+      forecastdate.forEach((datelement, index) => {
+        const futureDate = new Date(today); // Clone the current date
+        futureDate.setDate(today.getDate() + index); // Set the date to today + index
+        const day = futureDate.getDate();
+        const month = futureDate.getMonth() + 1; // Months are 0-based, so add 1
+        const year = futureDate.getFullYear();
+        // Set the innerHTML of each date element
+        datelement.innerHTML = `${day}/${month}/${year}`;
+      });
 
       // Save the city to recent searches and update the dropdown
       saveCity(location);

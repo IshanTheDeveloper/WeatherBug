@@ -299,8 +299,31 @@ body {
   padding: 0.5rem; /* Inner padding */
   border-bottom-left-radius: 1.5rem; /* Rounded bottom left corner */
   border-bottom-right-radius: 1.5rem; /* Rounded bottom right corner */
-}
 
+  &:hover {
+    background-color: rgb(66, 48, 14);
+    cursor: pointer;
+    border-radius: 2rem;
+    transition: all 0.3s;
+  }
+}
+.forecast-date {
+  text-align: center;
+  color: greenyellow;
+}
+.forecast span img {
+  text-align: center;
+  margin-left: 4vw;
+  background-color: rgb(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  border: 2px solid white;
+}
+.forecast-temp,
+.forecast-humidity {
+  font-size: 1rem;
+  margin-left: 1rem;
+  margin-top: 0.5vh;
+}
 /* Styles for forecast date display */
 #forecast-date {
   text-align: center; /* Center the text */
