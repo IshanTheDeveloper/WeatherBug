@@ -366,14 +366,27 @@ body {
   .main-container {
     display: block; /* Stack elements vertically */
   }
+  .github {
+    justify-content: start;
+    margin-left: 5vw;
+  }
+  .heading {
+    width: 73vw;
+  }
   .container {
-    width: 82vw; /* Adjust container width */
-    height: 45vh; /* Adjust container height */
+    width: 70vw; /* Adjust container width */
+    height: 50vh; /* Adjust container height */
+  }
+  .location {
+    width: 90%;
   }
   .location,
   .get-weather,
   .current-location {
     margin-top: 2vh; /* Adjust margin */
+  }
+  #icon-img {
+    height: 10%;
   }
   .display-section {
     width: 80vw; /* Adjust section width */
@@ -381,34 +394,53 @@ body {
     background-color: black; /* Set background color */
   }
   .city-name {
-    width: 82.5%; /* Adjust width */
-    font-size: 3rem; /* Adjust font size */
-    margin-top: 3vh; /* Adjust margin */
+    width: 70%; /* Adjust width */
+    font-size: 2.5rem; /* Adjust font size */
+    margin-top: 0.5vh; /* Adjust margin */
     padding-right: 3rem; /* Adjust padding */
     background-color: black; /* Set background color */
   }
-  .country,
+  .country {
+    background-color: black; /* Set background color */
+    margin-top: 0; /* Remove margin */
+    width: 70%;
+  }
   .longitude {
     background-color: black; /* Set background color */
     margin-top: 0; /* Remove margin */
+    width: 79%;
   }
   .weather-items {
     background-color: black; /* Set background color */
     margin-top: 0; /* Remove margin */
     margin-left: 0; /* Remove margin */
+    padding: 0.5rem;
   }
   .weather-items span {
-    width: 17vw; /* Adjust width */
-    margin-left: 0.5vw; /* Adjust margin */
+    width: 14.5vw; /* Adjust width */
+    margin-left: 0.3vw; /* Adjust margin */
     font-size: 1.2rem; /* Adjust font size */
-    padding-top: 0.5rem; /* Adjust padding */
-    height: 15vh; /* Adjust height */
+    padding-top: 0.7rem; /* Adjust padding */
+    height: 12vh; /* Adjust height */
   }
   #forecast-heading {
     margin-top: 0; /* Remove margin */
+    width: 81%;
+  }
+  .forecast {
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 80vw;
+    gap: 3rem;
+    margin-left: 2.5rem;
   }
   .forecast span {
-    height: 15vh; /* Adjust height */
+    height: 17vh; /* Adjust height */
+    width: 30vw;
+  }
+  .forecast span img {
+    margin-left: 11vw;
+    margin-top: 2vh;
   }
 }
 
@@ -416,10 +448,14 @@ body {
 @media (max-width: 376px) {
   .heading {
     font-size: 2rem; /* Adjust font size */
+    width: 90%;
   }
   .container {
     width: 80vw; /* Adjust width */
     margin-left: 5vw; /* Adjust margin */
+  }
+  .container input {
+    height: 4vh;
   }
   .weather-logo {
     font-size: 2rem; /* Adjust font size */
@@ -434,17 +470,24 @@ body {
     font-size: 1.5rem; /* Adjust font size */
     margin-top: 1vh; /* Adjust margin */
     padding-left: 1.5rem; /* Adjust padding */
+    width: 81%;
   }
-  .country,
+  .country {
+    font-size: 1.3rem; /* Adjust font size */
+    padding-right: 2rem; /* Adjust padding */
+    width: 81%;
+  }
   .longitude {
     font-size: 1.3rem; /* Adjust font size */
     padding-right: 2rem; /* Adjust padding */
+    width: 98%;
   }
   .weather-items span {
     font-size: 0.7rem; /* Adjust font size */
     border-radius: 0.5rem; /* Adjust border radius */
     height: 10vh; /* Adjust height */
     margin-bottom: 0; /* Remove margin */
+    width: 18vw;
   }
   .weather-items span i {
     font-size: 1.3rem; /* Adjust icon size */
@@ -452,9 +495,19 @@ body {
   #forecast-heading {
     margin-top: 0; /* Remove margin */
     font-size: 1rem; /* Adjust font size */
+    width: 100%;
   }
   .forecast span {
-    height: 10vh; /* Adjust height */
+    height: 30vh; /* Adjust height */
+    width: 70vw;
+    margin-left: 3.5vw;
+    margin-top: 1vh;
+  }
+  .forecast span p {
+    font-size: 1.5rem;
+  }
+  .forecast span img {
+    margin-left: 25vw;
   }
   #or {
     font-size: 1rem; /* Adjust font size */
