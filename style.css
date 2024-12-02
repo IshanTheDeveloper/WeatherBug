@@ -572,3 +572,49 @@ body {
     font-size: 1rem; /* Adjust font size */
   }
 }
+@media (max-width: 420px) {
+  body {
+    background-image: none;
+  }
+  .heading {
+    color: black;
+    background-color: slategrey;
+    border: 2px solid black;
+  }
+  .container {
+    height: 50vh;
+    border: 2px solid black;
+  }
+  .github {
+    display: none;
+  }
+  .city-name,
+  .country,
+  .longitude {
+    width: 100vw;
+    padding: 0;
+  }
+  .city-name p {
+    margin-top: 0.5vh;
+    padding: 0.5rem;
+  }
+  #forecast-heading {
+    background-color: slategrey;
+    color: white;
+  }
+  .forecast {
+    width: 98vw;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+  }
+  .forecast span {
+    height: 18vh;
+    width: 42vw;
+  }
+  .forecast-humidity,
+  .forecast-temp {
+    text-align: center;
+    font-size: 1px;
+  }
+}

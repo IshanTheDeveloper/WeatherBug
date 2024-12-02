@@ -117,14 +117,14 @@ const weatherOperation = (lat, lon) => {
       const hourData = data.forecast.forecastday[0].hour;
       for (let i = 0; i < forecasttemp.length && i < hourData.length; i++) {
         const temp = hourData[i].temp_c;
-        forecasttemp[i].innerHTML = `Temperature : ${temp}°C`;
+        forecasttemp[i].innerHTML = `Temperature ${temp}°C`;
       }
 
       const forecasthumidity = document.querySelectorAll(".forecast-humidity");
       const humidityData = data.forecast.forecastday[0].hour;
       for (let i = 0; i < forecasttemp.length && i < humidityData.length; i++) {
         const humid = humidityData[i].humidity;
-        forecasthumidity[i].innerHTML = `Humidity :  ${humid}%`;
+        forecasthumidity[i].innerHTML = `Humidity  ${humid}%`;
       }
 
       // Get 5 forecast's date
