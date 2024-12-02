@@ -576,6 +576,9 @@ body {
   body {
     background-image: none;
   }
+  .weather-items span {
+    height: 10vh;
+  }
   .heading {
     color: black;
     background-color: slategrey;
