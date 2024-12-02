@@ -32,16 +32,29 @@ body {
   margin-top: 0.5vh;
   margin-right: 4vw;
   margin-bottom: 0.5vh;
+  position: absolute;
+  z-index: 10;
+  top: 2vh;
+  left: 96vw;
 }
 .github a {
   cursor: pointer;
   color: red;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   background-color: rgb(255, 255, 255, 0.5);
-  border: 2px solid red;
-  border-radius: 1rem;
+  border: 2px solid aqua;
+  border-radius: 2rem;
   padding: 0.5rem;
+  &:hover {
+    background-color: grey;
+    box-shadow: 0 0 5px 5px aqua;
+    transition: all 0.5s;
+    animation: none;
+    text-decoration: none;
+    color: skyblue;
+    font-size: 1.8rem;
+  }
   animation: blinks 0.5s ease-in-out infinite;
 }
 @keyframes blinks {
@@ -70,6 +83,7 @@ body {
     0.5
   ); /* Semi-transparent white background */
   border: 2px solid white; /* White border */
+  margin-top: 5vh;
 }
 
 /* Styles for the weather logo */
@@ -102,6 +116,7 @@ body {
   font-size: 1rem; /* Font size */
   border-radius: 1rem; /* Rounded corners */
   border: 1px solid grey; /* Grey border */
+  margin-top: 2vh;
   cursor: pointer; /* Pointer cursor on hover */
 }
 
@@ -204,7 +219,7 @@ body {
 /* Styles for the display section of weather data */
 .display-section {
   width: 63vw; /* Width of the section */
-  margin-top: 0vh; /* Margin from the top */
+  margin-top: 5vh; /* Margin from the top */
   margin-right: 1vw;
   height: max-content;
   border-radius: 2rem; /* Rounded corners */
@@ -337,6 +352,19 @@ body {
     transition: all 0.3s;
   }
 }
+#recent-searches {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.4rem;
+  position: absolute;
+  top: 34vh;
+  margin-left: 1.5vw;
+  width: 25vw;
+  height: 7vh;
+  border-radius: 0.5rem;
+  scroll-behavior: smooth;
+}
 .forecast-date {
   text-align: center;
   color: greenyellow;
@@ -362,7 +390,7 @@ body {
 }
 
 /* Responsive styles for smaller screens */
-@media (max-width: 769px) {
+@media (max-width: 800px) {
   .main-container {
     display: block; /* Stack elements vertically */
   }
@@ -371,30 +399,37 @@ body {
     margin-left: 5vw;
   }
   .heading {
-    width: 73vw;
+    width: 90vw;
   }
   .container {
-    width: 70vw; /* Adjust container width */
+    width: 85vw; /* Adjust container width */
     height: 50vh; /* Adjust container height */
   }
   .location {
-    width: 90%;
+    width: 100%;
   }
   .location,
   .get-weather,
   .current-location {
-    margin-top: 2vh; /* Adjust margin */
+    margin-top: 5vh; /* Adjust margin */
+  }
+  .weather-logo i {
+    font-size: 4rem;
+  }
+  #recent-searches {
+    border: 2px solid black;
+    margin-top: 6vh;
   }
   #icon-img {
     height: 10%;
   }
   .display-section {
-    width: 80vw; /* Adjust section width */
+    width: 100vw; /* Adjust section width */
     background-image: none; /* Remove background image */
     background-color: black; /* Set background color */
   }
   .city-name {
-    width: 70%; /* Adjust width */
+    width: 87%; /* Adjust width */
     font-size: 2.5rem; /* Adjust font size */
     margin-top: 0.5vh; /* Adjust margin */
     padding-right: 3rem; /* Adjust padding */
@@ -403,12 +438,12 @@ body {
   .country {
     background-color: black; /* Set background color */
     margin-top: 0; /* Remove margin */
-    width: 70%;
+    width: 90%;
   }
   .longitude {
     background-color: black; /* Set background color */
     margin-top: 0; /* Remove margin */
-    width: 79%;
+    width: 98%;
   }
   .weather-items {
     background-color: black; /* Set background color */
@@ -417,75 +452,95 @@ body {
     padding: 0.5rem;
   }
   .weather-items span {
-    width: 14.5vw; /* Adjust width */
-    margin-left: 0.3vw; /* Adjust margin */
+    width: 17vw; /* Adjust width */
+    margin-left: 1vw; /* Adjust margin */
     font-size: 1.2rem; /* Adjust font size */
     padding-top: 0.7rem; /* Adjust padding */
-    height: 12vh; /* Adjust height */
+    height: 10vh; /* Adjust height */
   }
   #forecast-heading {
+    color: black;
     margin-top: 0; /* Remove margin */
-    width: 81%;
+    width: 100%;
   }
   .forecast {
     flex-wrap: wrap;
     flex-direction: row;
-    width: 80vw;
+    width: 100vw;
     gap: 3rem;
-    margin-left: 2.5rem;
+    margin-left: 2rem;
   }
   .forecast span {
     height: 17vh; /* Adjust height */
-    width: 30vw;
+    width: 40vw;
   }
   .forecast span img {
-    margin-left: 11vw;
-    margin-top: 2vh;
+    margin-left: 40%;
+    margin-top: 1.5vh;
+  }
+  .forecast-date {
+    font-size: 2rem;
+  }
+  .forecast-temp,
+  .forecast-humidity {
+    font-size: 1.5rem;
+    margin-top: 1vh;
   }
 }
 
 /* Responsive styles for very small screens */
-@media (max-width: 376px) {
+@media (max-width: 500px) {
   .heading {
     font-size: 2rem; /* Adjust font size */
     width: 90%;
   }
   .container {
-    width: 80vw; /* Adjust width */
+    height: 40vh;
+    width: 83vw; /* Adjust width */
     margin-left: 5vw; /* Adjust margin */
   }
   .container input {
-    height: 4vh;
+    height: 2.5vh;
+    margin-top: 1vh;
+  }
+  .get-weather {
+    margin-top: 1vh;
+  }
+  .current-location {
+    margin-top: 2vh;
   }
   .weather-logo {
     font-size: 2rem; /* Adjust font size */
   }
   .weather-logo i {
-    font-size: 3rem; /* Adjust icon size */
+    font-size: 2rem; /* Adjust icon size */
   }
-  .bottom-logo {
-    display: none; /* Hide bottom logo section */
+  .bottom-logo i {
+    font-size: 2rem;
+  }
+  #recent-searches {
+    visibility: hidden;
   }
   .city-name {
     font-size: 1.5rem; /* Adjust font size */
     margin-top: 1vh; /* Adjust margin */
     padding-left: 1.5rem; /* Adjust padding */
-    width: 81%;
+    width: 86%;
   }
   .country {
     font-size: 1.3rem; /* Adjust font size */
     padding-right: 2rem; /* Adjust padding */
-    width: 81%;
+    width: 89%;
   }
   .longitude {
     font-size: 1.3rem; /* Adjust font size */
     padding-right: 2rem; /* Adjust padding */
-    width: 98%;
+    width: 99%;
   }
   .weather-items span {
     font-size: 0.7rem; /* Adjust font size */
     border-radius: 0.5rem; /* Adjust border radius */
-    height: 10vh; /* Adjust height */
+    height: 6vh; /* Adjust height */
     margin-bottom: 0; /* Remove margin */
     width: 18vw;
   }
@@ -494,20 +549,24 @@ body {
   }
   #forecast-heading {
     margin-top: 0; /* Remove margin */
-    font-size: 1rem; /* Adjust font size */
+    font-size: 1.5rem; /* Adjust font size */
     width: 100%;
   }
+  .forecast {
+    width: 100vw;
+    margin-left: 1vw;
+  }
   .forecast span {
-    height: 30vh; /* Adjust height */
-    width: 70vw;
-    margin-left: 3.5vw;
+    height: 15vh; /* Adjust height */
+    width: 40vw;
+    margin-left: 0vw;
     margin-top: 1vh;
   }
   .forecast span p {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
   .forecast span img {
-    margin-left: 25vw;
+    margin-left: 14vw;
   }
   #or {
     font-size: 1rem; /* Adjust font size */
