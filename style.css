@@ -612,12 +612,11 @@ body {
     gap: 2vw;
   }
   .forecast span {
-    height: 18vh;
+    height: 25vh;
     width: 42vw;
   }
   .forecast-humidity,
   .forecast-temp {
-    text-align: center;
     font-size: 1px;
   }
 }
